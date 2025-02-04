@@ -1,0 +1,30 @@
+.link {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.titulo {
+    font-weight: 500;
+}
+
+.tecnologias > ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 300px;
+    }
+}

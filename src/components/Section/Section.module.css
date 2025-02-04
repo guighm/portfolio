@@ -1,0 +1,32 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.foto {
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
+
+.icons {
+    margin: 1rem auto;
+    display: flex;
+    gap: 1.6rem;
+    list-style: none;
+}
+
+@media (min-width: 1024px) {
+    .foto, .icon__image {
+        transition: transform 0.2s linear;
+    }
+    
+    .foto:hover {
+        transform: scale(1.1);
+    }
+    
+    .icon__image:hover {
+        transform: scale(1.2);
+    }
+}

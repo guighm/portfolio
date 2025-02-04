@@ -1,0 +1,14 @@
+.lista {
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+    .lista {
+        width: 1024px;
+        margin: 1rem auto;
+    }
+}
