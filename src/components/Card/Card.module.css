@@ -17,10 +17,16 @@
     font-weight: 500;
 }
 
-.tecnologias > ul {
+.tecnologias>ul {
     list-style: none;
     display: flex;
     gap: 0.5rem;
+}
+
+.lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 1024px) {

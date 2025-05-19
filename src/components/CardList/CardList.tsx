@@ -5,7 +5,7 @@ import { PostgrestError } from "@supabase/supabase-js";
 import { Project } from "@/types";
 import Loading from "../Loading";
 import Error from "../Error";
-import Card from "../Card/Card";
+import Card from "../Card";
 
 const CardList = () => {
     const [data, setData] = useState<Project[] | null>(null);
@@ -23,9 +23,9 @@ const CardList = () => {
 
     return (
         <ul className={styles.lista}>
-            {data!.map(projeto => 
+            {data && data.map(projeto => 
                 <li key={projeto.id}>
-                    <Card link={projeto.link} titulo={projeto.title} tecnologias={projeto.technologies}/>
+                    <Card project={projeto}/>
                 </li>
             )}
         </ul>

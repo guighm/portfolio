@@ -7,3 +7,9 @@
 .main {
     flex: 1;
 }
+
+@media (min-width: 1024px) {
+    .main {
+        margin-inline: auto;
+    }
+}

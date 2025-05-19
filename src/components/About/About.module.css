@@ -23,6 +23,38 @@
     margin: 2.5rem 0;
 }
 
-.languages, .tools {
+.techs {
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.big_list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.big_list ul {
+    border: 1px solid var(--primary-color);
+    padding: 1.5rem;
+}
+
+.ul p {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .big_list {
+    grid-template-columns: repeat(4, 1fr);
+}
 }

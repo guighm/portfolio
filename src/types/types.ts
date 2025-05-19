@@ -5,12 +5,26 @@ export type Language = {
 
 export type Project = {
     id: number,
-    title: string,
+    name: string,
+    type: string,
+    link: string,
+}
+
+export type ProjectDTO = {
+    id: number,
     technologies: string[],
-    link: string
+    description: string
 }
 
 export type Technology = {
     id: number,
     image: string
+}
+
+export type Repo = {
+    id: number,
+    name: string,
+    languages_url: string,
+    html_url: string,
+    description: string
 }
