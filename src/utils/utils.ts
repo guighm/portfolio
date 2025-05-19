@@ -43,7 +43,7 @@ export const getProject = async (projeto: Project): Promise<ProjectDTO> => {
         console.error("Error fetching data from GitHub API:", response.statusText);
     }
 
-    const nomes_para_remover = ["Dockerfile", "Shell"];
+    const nomes_para_remover = ["Dockerfile", "Shell", "JavaScript"];
     dto.technologies = dto.technologies.filter((value) => (!nomes_para_remover.includes(value)));
     dto.technologies = dto.technologies.filter((value, index) => (dto.technologies.indexOf(value) === index));
     return dto;
