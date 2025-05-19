@@ -4,7 +4,7 @@ import styles from "./Section.module.css";
 const Section = () => {
     return <article className={styles.section}>
         <Image className={styles.foto} src="/foto.jpg" width={120} height={120} priority alt="Foto de Guilherme Moraes" />
-        <h1>Guilherme Moraes</h1>
+        <h1 className={styles.h1}>Guilherme Moraes</h1>
         <p><strong>Email: </strong>ggm.eng23&#64;uea.edu.br</p>
         <ul className={styles.icons}>
             <li>

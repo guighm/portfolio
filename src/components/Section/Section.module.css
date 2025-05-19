@@ -17,6 +17,11 @@
     list-style: none;
 }
 
+.h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.1rem;
+}
+
 @media (min-width: 1024px) {
     .foto, .icon__image {
         transition: transform 0.2s linear;

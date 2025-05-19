@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import styles from "./CardList.module.css";
-import fetchData from "@/utils/api";
 import { PostgrestError } from "@supabase/supabase-js";
 import { Project } from "@/types";
 import Loading from "../Loading";
 import Error from "../Error";
 import Card from "../Card";
+import { fetchData } from "@/utils";
 
 const CardList = () => {
     const [data, setData] = useState<Project[] | null>(null);

@@ -1,9 +1,10 @@
-import { githubToken, githubUrl, githubUser } from "@/config/api";
+import { githubToken, githubUrl, githubUser, supabase } from "@/config/api";
 import { Project, ProjectDTO, Repo } from "@/types";
+import { PostgrestError } from "@supabase/supabase-js";
 
 export const getProject = async (projeto: Project): Promise<ProjectDTO> => {
 
-    const dto : ProjectDTO = {
+    const dto: ProjectDTO = {
         technologies: [],
         description: "",
         id: 0
@@ -47,3 +48,23 @@ export const getProject = async (projeto: Project): Promise<ProjectDTO> => {
     dto.technologies = dto.technologies.filter((value, index) => (dto.technologies.indexOf(value) === index));
     return dto;
 }
+
+export const fetchData = async (
+    table: string,
+    setData: (data: Project[] | null) => void,
+    setError: (error: PostgrestError | null) => void,
+    setLoading: (loading: boolean) => void
+) => {
+    setLoading(true);
+    const { data, error } = await supabase.from(table).select("*");
+
+    if (error) {
+        setError(error);
+        setData(null);
+    } else {
+        setData(data as Project[]);
+        setError(null);
+    }
+
+    setLoading(false);
+};
